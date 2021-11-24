@@ -5,15 +5,239 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,300' rel='stylesheet' type='text/css'>
   <title>Desenvolvedor M3</title>
   <link rel="stylesheet" href="main.css" />
+  <link href="./img/logo-m3.png" rel="icon">
+
+
+
 </head>
 
 <body>
+  <!-- HEADER -->
+  <header>
 
+
+    <a href=""><img src="./img/logo-m3.png" alt="" srcset=""></a>
+
+
+    <div class="shop-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="17" height="20" fill="currentColor" class="bi bi-bag-fill"
+        viewBox="0 0 16 16">
+        <path
+          d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5z" />
+      </svg>
+      <span id="clicks">0</span>
+    </div>
+
+  </header>
+
+
+  <div class="container">
+    </head>
+
+    <body>
+
+
+      <!-- LEFT MENU -->
+      <h1>Blusas</h1>
+      <div class="filter-order">
+        <button href="" class="" onclick="openFilters()">Filtrar</button>
+        <button href="" class="" onclick="openSort()">Ordenar</button>
+      </div>
+      <!-- BOTON ORDENAR DESKTOP-->
+      
+      <div class="sort">
+        <div class="dropdown">
+          <button class="dropbtn" onclick="myFunction()">Ordenar por:
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="9" fill="currentColor" class="bi bi-chevron-down"
+              viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+            </svg>
+          </button>
+          
+          <div class="dropdown-content" id="myDropdown">
+            
+            <a href="#">Más reciente</a>
+            <a href="#">Menor precio</a>
+            <a href="#">Mayor precio</a>
+          </div>
+          
+        </div>
+      </div>
+
+      <!-- BTN ORDENAR MOBILE -->
+      <div id="sort" class="sort">
+          <div class="mobileTop">
+              <h6 class="closeText">Ordenar</h6> <a href="" class="closebtn" onclick="closeSort()">×</a>
+            </div>
+            <div class="sort-content" id="myDropdown">
+            
+            <a href="#">Más reciente</a>
+            <a href="#">Menor precio</a>
+            <a href="#">Mayor precio</a>
+          </div>
+
+            </div>  
+
+      <div id="left-menu" class="left-menu">
+        <div class="mobileTop">
+          <h6 class="closeText">Filtrar</h6> <a href="" class="closebtn" onclick="closeFilters()">×</a>
+
+        </div>
+        <div class="filters">
+          <!-- cores -->
+          <div class="cores">
+
+
+            <h6>COLORES</h6> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="9" fill="currentColor" class="bi bi-chevron-down"
+              viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+            </svg>
+            
+            <ul id="cores">
+              <!-- <li> <input class="" type="checkbox" value=""> Amarillo</li> -->
+            </ul>
+            <a id="loadMoreCores"href="">Ver todos los colores <svg xmlns="http://www.w3.org/2000/svg" width="12" height="9"
+                fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+              </svg></a>
+          </div>
+          <!-- TAMAÑOS -->
+          <div class="tamanos">
+            <h6>TAMAÑOS</h6>
+            <ul id="tallas">
+
+            </ul>
+
+          </div>
+          <!-- PRECIOS -->
+          <div class="precios">
+            <h6>PRECIOS</h6>
+            <ul>
+              <li> <input id="price1" type="radio" name="prices" value="" hidden> <label for="price1"
+                  class="checkmark"></label> de $0 a $50</li>
+              <li> <input id="price2" type="radio" name="prices" value="" hidden> <label for="price2"
+                  class="checkmark"></label> de $51 a $150</li>
+              <li> <input id="price3" type="radio" name="prices" value="" hidden> <label for="price3"
+                  class="checkmark"></label> de $151 a $300</li>
+              <li> <input id="price4" type="radio" name="prices" value="" hidden> <label for="price4"
+                  class="checkmark"></label> de $301 a $500</li>
+              <li> <input id="price5" type="radio" name="prices" value="" hidden> <label for="price5"
+                  class="checkmark"></label> a partir de $500</li>
+            </ul>
+
+          </div>
+           
+        </div>
+        <div class="filters-actions">
+        <button href="" class="apply" onclick="">APLICAR</button>
+        <button href="" class="clear" onclick="cleanFilters()">LIMPIAR</button>
+      </div>
+         
+      </div>
+
+
+      <!-- CONTENIDO PRINCIPAL -->
+      <div id="content" class="content">
+
+
+
+        <div class="catalog">
+
+          <!-- <div class="item">
+        <img src="./img/img_2.png" alt="">
+        <ul>
+          <li class="name">          Nombre articulo          </li>
+          <li class="price">          Precio         </li>
+          <li class="info">          Descripcion        </li>
+        </ul>
+        <a>Comprar</a>
+
+    </div> -->
+
+
+        </div>
+        <div class="load-more">
+          <a href="#" id="loadMore">CARGAR MÁS</a>
+        </div>
+      </div>
+  </div>
 </body>
-<h1>Desafio m3</h1>
+<footer>
+  <h1>M3: Implantação de E-commerce VTEX</h1>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="bundle.js"></script>
 
-<script src="bundle.js"></script>
+<script>
+  function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function (e) {
+    if (!e.target.matches('.dropbtn')) {
+      var myDropdown = document.getElementById("myDropdown");
+      if (myDropdown.classList.contains('show')) {
+        myDropdown.classList.remove('show');
+      }
+
+    }
+  }
+  function coresDropdown() {
+    document.getElementById("coresDropdown").classList.toggle("show");
+  }
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function (e) {
+    if (!e.target.matches('.dropbtn')) {
+      var myDropdown = document.getElementById("coresDropdown");
+      if (myDropdown.classList.contains('show')) {
+        myDropdown.classList.remove('show');
+      }
+
+    }
+  }
+</script>
+
+<script>
+  // MOBILE MEMU FILTERS
+  function openFilters() {
+    document.getElementById("left-menu").style.width = "375px";
+    document.getElementById("content").style.marginLeft = "375px";
+  }
+
+  function closeFilters() {
+    document.getElementById("left-menu").style.width = "0";
+    document.getElementById("content").style.marginLeft = "0";
+  }
+ // MOBILE MEMU SORT
+  function openSort() {    
+    document.getElementById("sort").style.width = "375px";
+    document.getElementById("content").style.marginLeft = "375px";
+  }
+
+  function closeSort() {
+    document.getElementById("sort").style.width = "0";
+    document.getElementById("content").style.marginLeft = "0";
+  }
+  // CLEAN FILTERS
+  function cleanFilters(){
+    $('input[type=checkbox]').prop('checked',false);
+  }
+
+  // COMPRAR BTN
+  var clicks = 0;
+
+function onClick() {
+  clicks += 1;
+  document.getElementById("clicks").innerHTML = clicks;
+};
+</script>
+
+
 
 </html>
