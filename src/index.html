@@ -19,7 +19,7 @@
   <header>
 
 
-    <a href=""><img src="./img/logo-m3.png" alt="" srcset=""></a>
+    <a ><img src="./img/logo-m3.png" alt="" srcset=""></a>
 
 
     <div class="shop-icon">
@@ -43,8 +43,8 @@
       <!-- LEFT MENU -->
       <h1>Blusas</h1>
       <div class="filter-order">
-        <button href="" class="" onclick="openFilters()">Filtrar</button>
-        <button href="" class="" onclick="openSort()">Ordenar</button>
+        <button  class="" onclick="openFilters()">Filtrar</button>
+        <button  class="" onclick="openSort()">Ordenar</button>
       </div>
       <!-- BOTON ORDENAR DESKTOP-->
       
@@ -71,9 +71,9 @@
       <!-- BTN ORDENAR MOBILE -->
       <div id="sort" class="sort">
           <div class="mobileTop">
-              <h6 class="closeText">Ordenar</h6> <a href="" class="closebtn" onclick="closeSort()">×</a>
+              <h6 class="closeText">Ordenar</h6> <a  class="closebtn" onclick="closeSort()">×</a>
             </div>
-            <div class="sort-content" id="myDropdown">
+            <div class="sort-content" >
             
             <a href="#">Más reciente</a>
             <a href="#">Menor precio</a>
@@ -84,50 +84,60 @@
 
       <div id="left-menu" class="left-menu">
         <div class="mobileTop">
-          <h6 class="closeText">Filtrar</h6> <a href="" class="closebtn" onclick="closeFilters()">×</a>
+          <h6 class="closeText">Filtrar</h6> <a  class="closebtn" onclick="closeFilters()">×</a>
 
         </div>
         <div class="filters">
-          <!-- cores -->
-          <div class="cores">
-
-
-            <h6>COLORES</h6> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="9" fill="currentColor" class="bi bi-chevron-down"
+          <!-- COLORS -->
+          <div class="colors">
+            
+              <h6>COLORES</h6> <a  onclick="colorsDropdown()" class="filterDropDown ddColors"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="13" fill="currentColor" class="bi bi-chevron-down "
               viewBox="0 0 16 16">
               <path fill-rule="evenodd"
                 d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
-            </svg>
+            </svg></a>
             
-            <ul id="cores">
+            
+            <ul id="colors" class="hidden">
               <!-- <li> <input class="" type="checkbox" value=""> Amarillo</li> -->
             </ul>
-            <a id="loadMoreCores"href="">Ver todos los colores <svg xmlns="http://www.w3.org/2000/svg" width="12" height="9"
+            <a id="loadMoreColors">Ver todos los colores <svg xmlns="http://www.w3.org/2000/svg" width="12" height="9"
                 fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
                 <path fill-rule="evenodd"
                   d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
               </svg></a>
           </div>
-          <!-- TAMAÑOS -->
-          <div class="tamanos">
-            <h6>TAMAÑOS</h6>
-            <ul id="tallas">
+          <!-- SIZES -->
+          <div class="sizes">
+            <h6>TAMAÑOS</h6> <a onclick="sizesDropdown()" class="filterDropDown ddSizes"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="13" fill="currentColor" class="bi bi-chevron-down "
+              viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+            </svg></a>
+            
+            <ul id="size" class="hidden">
 
             </ul>
 
           </div>
-          <!-- PRECIOS -->
-          <div class="precios">
-            <h6>PRECIOS</h6>
-            <ul>
-              <li> <input id="price1" type="radio" name="prices" value="" hidden> <label for="price1"
+          <!-- PRICES -->
+          <div class="prices">
+            <h6>PRECIOS</h6> 
+            <a  onclick="pricesDropdown()" class="filterDropDown ddPrices"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="13" fill="currentColor" class="bi bi-chevron-down "
+              viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+            </svg></a>
+            <ul id="prices" class="hidden">
+              <li> <input id="price1" type="radio" name="price" value="0,50" hidden> <label for="price1"
                   class="checkmark"></label> de $0 a $50</li>
-              <li> <input id="price2" type="radio" name="prices" value="" hidden> <label for="price2"
+              <li> <input id="price2" type="radio" name="price" value="51,150" hidden> <label for="price2"
                   class="checkmark"></label> de $51 a $150</li>
-              <li> <input id="price3" type="radio" name="prices" value="" hidden> <label for="price3"
+              <li> <input id="price3" type="radio" name="price" value="151,300" hidden> <label for="price3"
                   class="checkmark"></label> de $151 a $300</li>
-              <li> <input id="price4" type="radio" name="prices" value="" hidden> <label for="price4"
+              <li> <input id="price4" type="radio" name="price" value="301,500" hidden> <label for="price4"
                   class="checkmark"></label> de $301 a $500</li>
-              <li> <input id="price5" type="radio" name="prices" value="" hidden> <label for="price5"
+              <li> <input id="price5" type="radio" name="price" value="500" hidden> <label for="price5"
                   class="checkmark"></label> a partir de $500</li>
             </ul>
 
@@ -135,14 +145,14 @@
            
         </div>
         <div class="filters-actions">
-        <button href="" class="apply" onclick="">APLICAR</button>
-        <button href="" class="clear" onclick="cleanFilters()">LIMPIAR</button>
+        <button  class="apply" onclick="">APLICAR</button>
+        <button  class="clear" onclick="">LIMPIAR</button>
       </div>
          
       </div>
 
 
-      <!-- CONTENIDO PRINCIPAL -->
+      <!-- MAIN CONTENT -->
       <div id="content" class="content">
 
 
@@ -173,8 +183,47 @@
 </footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript" src="bundle.js"></script>
-
 <script>
+  function colorsDropdown() {
+    document.getElementById("colors").classList.toggle("show");
+  }
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function (e) {
+    if (!e.target.matches('.ddColors')) {      
+      var colorsFilter = document.getElementById("colors");
+      if (colorsFilter.classList.contains('show')) {
+        colorsFilter.classList.remove('show');
+      }
+
+    }
+  }
+
+  function sizesDropdown() {
+    document.getElementById("size").classList.toggle("show");
+  }
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function (e) {
+    if (!e.target.matches('.ddSizes')) {
+      var myDropdown = document.getElementById("size");
+      if (myDropdown.classList.contains('show')) {
+        myDropdown.classList.remove('show');
+      }
+
+    }
+  }
+  function pricesDropdown() {
+    document.getElementById("prices").classList.toggle("show");
+  }
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function (e) {
+    if (!e.target.matches('.ddPrices')) {
+      var myDropdown = document.getElementById("prices");
+      if (myDropdown.classList.contains('show')) {
+        myDropdown.classList.remove('show');
+      }
+
+    }
+  }
   function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
   }
@@ -188,46 +237,33 @@
 
     }
   }
-  function coresDropdown() {
-    document.getElementById("coresDropdown").classList.toggle("show");
-  }
-  // Close the dropdown if the user clicks outside of it
-  window.onclick = function (e) {
-    if (!e.target.matches('.dropbtn')) {
-      var myDropdown = document.getElementById("coresDropdown");
-      if (myDropdown.classList.contains('show')) {
-        myDropdown.classList.remove('show');
-      }
-
-    }
-  }
+  
+ 
+  
 </script>
 
 <script>
   // MOBILE MEMU FILTERS
   function openFilters() {
     document.getElementById("left-menu").style.width = "375px";
-    document.getElementById("content").style.marginLeft = "375px";
+  //  document.getElementById("content").style.marginLeft = "375px";
   }
 
   function closeFilters() {
     document.getElementById("left-menu").style.width = "0";
-    document.getElementById("content").style.marginLeft = "0";
+//document.getElementById("content").style.marginLeft = "0";
   }
  // MOBILE MEMU SORT
   function openSort() {    
     document.getElementById("sort").style.width = "375px";
-    document.getElementById("content").style.marginLeft = "375px";
+  //  document.getElementById("content").style.marginLeft = "375px";
   }
 
   function closeSort() {
     document.getElementById("sort").style.width = "0";
-    document.getElementById("content").style.marginLeft = "0";
+  //  document.getElementById("content").style.marginLeft = "0";
   }
-  // CLEAN FILTERS
-  function cleanFilters(){
-    $('input[type=checkbox]').prop('checked',false);
-  }
+  
 
   // COMPRAR BTN
   var clicks = 0;
